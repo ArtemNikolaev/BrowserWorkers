@@ -1,0 +1,17 @@
+body {
+    display: flex;
+}
+
+section {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+}
+
