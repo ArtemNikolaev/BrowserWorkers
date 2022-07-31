@@ -37,3 +37,11 @@ function postToSharedWorker(form) {
         id: crypto.randomUUID(),
     })
 }
+
+/* Service Worker */
+navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).catch(console.log)
+async function makeRequest() {
+    const result = await fetch('/API/data.json');
+    const payload = await result.json();
+    document.querySelector('.service-worker-answer').textContent = JSON.stringify(payload, null, 4);
+}
