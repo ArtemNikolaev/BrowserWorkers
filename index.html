@@ -19,14 +19,12 @@
 </section>
 
 <section>
-    <h2>Web Worker</h2>
-    <form onsubmit="postToWebWorker(this); return false">
-        <input name="param" type="text" placeholder="Name">
-        <input name="param" type="text" placeholder="Middle-Name">
-        <input name="param" type="text" placeholder="Sur-name">
+    <h2>Shared Worker</h2>
+    <form onsubmit="postToSharedWorker(this); return false">
+        <input name="param" type="text" placeholder="Message to send">
         <button type="submit">Send Message</button>
     </form>
-    <p class="web-worker-answer"></p>
+    <div class="shared-worker-answer"></div>
 </section>
 
 </body>
