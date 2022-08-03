@@ -45,3 +45,13 @@ async function makeRequest() {
     const payload = await result.json();
     document.querySelector('.service-worker-answer').textContent = JSON.stringify(payload, null, 4);
 }
+
+/* Web Worker RPC Command Dispatcher */
+const worker = new RPCWorker('_/commandsDispatcher.js');
+
+Promise.allSettled([
+    worker.exec('bla', 'bla bla bla'),
+    worker.exec('bla1', 'bla bla bla'),
+    worker.exec('bla2', 'bla bla bla'),
+    worker.exec('bad'),
+]).then(console.log);
